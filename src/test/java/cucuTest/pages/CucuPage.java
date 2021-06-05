@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class CucuPage extends BasePage{
 
-    @FindBy(xpath = "(//input)[1]")
-    public WebElement searchBar;
+    @FindBy(xpath = "//h4[.='Product']")
+    public WebElement productButton;
 
 }

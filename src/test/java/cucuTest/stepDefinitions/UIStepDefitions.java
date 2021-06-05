@@ -4,7 +4,6 @@ import cucuTest.pages.CucuPage;
 import cucuTest.utilities.ConfigurationReader;
 import cucuTest.utilities.Driver;
 import io.cucumber.java.en.Given;
-import org.openqa.selenium.Keys;
 
 public class UIStepDefitions {
     private CucuPage cucuPage;
@@ -16,10 +15,7 @@ public class UIStepDefitions {
     @Given("test step")
     public void test_step() {
         Driver.get().get(ConfigurationReader.get("url"));
+        cucuPage.productButton.click();
     }
 
-    @Given("type {string} and push enter in search bar")
-    public void type_and_push_enter_in_search_bar(String text) {
-        cucuPage.searchBar.sendKeys(text+ Keys.ENTER);
-    }
 }
